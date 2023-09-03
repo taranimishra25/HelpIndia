@@ -1,0 +1,33 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+</head>
+<body> -->
+    <%layout('layouts/boilerplate.ejs')%>
+    <h1><%=product.title%></h1>
+    <h1><%=product.condition%></h1>
+    <img src="<%=product.image%>">
+    <p>
+        <%=product.description%>
+    </p>
+    <p>
+        <a href="/products/<%=product._id%>/edit">Edit</a>
+    </p>
+    <p>
+        <form action="/products<%=product._id%>?_method=delete" method="post">
+            <button>
+                Delete
+            </button>
+        </form>
+    </p>
+    <footer>
+        <a href="/products">
+            All Donations
+        </a>
+    </footer>
+<!-- </body>
+</html> -->
